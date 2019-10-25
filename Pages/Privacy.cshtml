@@ -1,0 +1,18 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<h1>@Model.Mensaje</h1>
+
+<ul>
+@foreach (var item in Model.MiLista)
+{
+    <li>@item</li>
+}
+
+</ul>

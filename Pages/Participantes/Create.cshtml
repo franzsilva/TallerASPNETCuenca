@@ -1,0 +1,49 @@
+@page
+@model TallerASPNET.Pages.Participantes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Participante</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Participante.Nombre" class="control-label"></label>
+                <input asp-for="Participante.Nombre" class="form-control" />
+                <span asp-validation-for="Participante.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participante.Apellido" class="control-label"></label>
+                <input asp-for="Participante.Apellido" class="form-control" />
+                <span asp-validation-for="Participante.Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participante.cedula" class="control-label"></label>
+                <input asp-for="Participante.cedula" class="form-control" />
+                <span asp-validation-for="Participante.cedula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Participante.FechaNacimiento" class="control-label"></label>
+                <input asp-for="Participante.FechaNacimiento" class="form-control" />
+                <span asp-validation-for="Participante.FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
